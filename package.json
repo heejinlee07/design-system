@@ -35,7 +35,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "mylib",
+  "name": "@heejinlee/storybook-ts-react",
   "author": "heejin lee",
   "module": "dist/mylib.esm.js",
   "size-limit": [
