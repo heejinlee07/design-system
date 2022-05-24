@@ -1,0 +1,28 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Button, Props } from '../src/Button';
+
+<!-- 첫번째 text는 Document명, 슬래시로 중첩된 구조 표현  -->
+
+<Meta title="MDX/Button" component={Button} />
+
+export const Template = (args) => <Button {...args} />;
+
+# Button
+
+Let's define a story for out "Button" component:
+
+<Story name="My Button" args={{children:'I am in MDX'}}>
+  {Template.bind({})}
+</Story>
+
+<ArgsTable story='My Button'/>
+
+I want extra text description here!!!
+
+<Canvas>
+  <Story name='Secondary' args={{children:'MDX secondary', variant:'secondary'}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Labore magna diam justo gubergren magna sed accusam labore dolore, et sed dolores labore eos gubergren magna tempor, elitr justo at kasd et rebum sadipscing, amet et eos kasd et et ea est eirmod. Erat vero no sea accusam, et consetetur et et diam nonumy eos sea. Diam sed lorem eos consetetur voluptua lorem. Eirmod amet est tempor dolor stet sanctus sea sit. Ut ea vero gubergren accusam et, ipsum diam kasd dolore sed. Consetetur dolor sanctus dolor kasd et. Diam eirmod consetetur sit lorem eirmod, no magna duo invidunt lorem. Sit rebum eirmod voluptua eos sit, kasd magna diam takimata diam sed et. Takimata et sit amet accusam lorem, labore magna ipsum dolor ipsum. Dolor voluptua ipsum ea kasd at, sanctus et dolores ut ipsum vero, sed kasd et dolores nonumy dolor, voluptua nonumy dolor clita no sed et, takimata duo dolores diam accusam amet. Diam et magna et est voluptua, aliquyam dolores takimata lorem sadipscing rebum justo ipsum. Sadipscing vero dolor clita sanctus. Sed et rebum duo dolor est justo vero accusam, kasd erat sea eirmod eos labore diam ipsum justo clita, rebum tempor justo stet sanctus gubergren. Amet amet kasd stet dolore rebum sanctus. Aliquyam sanctus accusam sit takimata diam eos, ipsum sit dolor takimata et diam accusam eirmod accusam gubergren. Gubergren sed dolore et rebum, at stet aliquyam eos sed, takimata duo eirmod eos sadipscing dolor, ea sit invidunt sit dolores et amet eirmod diam. No takimata dolor sanctus kasd gubergren tempor est no, consetetur gubergren eos elitr eos, clita consetetur sed est ipsum sit. Diam et eirmod dolore ipsum at ipsum rebum dolores dolores. Lorem et elitr amet sadipscing stet eos duo sea. Aliquyam sit nonumy no diam est kasd tempor lorem, et est amet amet rebum amet stet dolores duo, lorem tempor voluptua sit lorem labore dolor tempor et, est ipsum aliquyam eos sanctus eos takimata stet amet, dolor et et amet est, aliquyam lorem lorem no consetetur est labore stet. Justo lorem takimata magna elitr takimata gubergren at. Sea eos labore ipsum et sit, dolor amet sanctus dolor ea ea et, eos no ea clita clita et diam. Lorem ipsum voluptua elitr et stet dolore lorem sit, clita lorem dolor no nonumy gubergren takimata, at et invidunt tempor rebum eirmod eos aliquyam diam eos, gubergren et takimata sanctus invidunt, vero diam erat consetetur amet voluptua. Vero consetetur sadipscing voluptua sadipscing, ipsum consetetur et magna invidunt et voluptua rebum sea tempor, erat sea clita et voluptua ipsum kasd vero gubergren. Et sed accusam diam ea eirmod et, dolor ipsum dolore amet diam sanctus voluptua kasd dolore, ut no gubergren ut at nonumy. Accusam lorem et et no et gubergren ipsum, diam tempor ut vero sea eirmod vero. Sed consetetur erat et sed dolore lorem ipsum, tempor dolores consetetur amet no diam accusam clita ipsum elitr, sit dolore vero amet est labore voluptua, aliquyam et et sit sadipscing ipsum et vero, et est sea gubergren eos diam duo. Rebum amet dolore diam ea. Sadipscing et.
