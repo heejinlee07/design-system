@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+import styled, { css } from 'styled-components';
 
 const StyledCheckBox = styled.input`
   &:hover {
@@ -7,9 +7,13 @@ const StyledCheckBox = styled.input`
   }
 `;
 
-const StyledLabel = styled.span`
+const StyledLabel = styled.span<{ isChecked: 'on' | 'off' }>`
+  ${props =>
+    props.isChecked === 'on' &&
+    css`
+      background-color: pink;
+    `}
   padding-left: 10;
-
   &:hover {
     cursor: pointer;
   }
@@ -18,15 +22,20 @@ const StyledLabel = styled.span`
 export interface CheckBoxProps {
   id: string;
   name: string;
-  value: string;
+  value: 'on' | 'off';
   label: string;
+  onChange: (value: 'on' | 'off') => void;
 }
 
-export const CheckBox = ({ id, name, value, label }: CheckBoxProps) => {
-  const [isChecked, setIsChecked] = useState(false);
-
+export const CheckBox = ({
+  id,
+  name,
+  value,
+  label,
+  onChange,
+}: CheckBoxProps) => {
   const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-    setIsChecked((target as HTMLInputElement).checked);
+    onChange(target.value === 'on' ? 'off' : 'on');
   };
 
   return (
@@ -37,9 +46,9 @@ export const CheckBox = ({ id, name, value, label }: CheckBoxProps) => {
         name={name}
         value={value}
         onChange={handleChange}
-        checked={isChecked}
+        checked={value === 'on'}
       />
-      <StyledLabel>{label}</StyledLabel>
+      <StyledLabel isChecked={value}>{label}</StyledLabel>
     </label>
   );
 };
