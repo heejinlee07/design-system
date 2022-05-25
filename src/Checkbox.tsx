@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import { styled } from './stitches.config';
+import styled from 'styled-components';
 
-const StyledCheckBox = styled('input', {
-  '&:hover': {
-    cursor: 'pointer',
-  },
-});
+const StyledCheckBox = styled.input`
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
-const StyledLabel = styled('span', {
-  paddingLeft: 10,
-  '&:hover': {
-    cursor: 'pointer',
-  },
-});
+const StyledLabel = styled.span`
+  padding-left: 10;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
 export interface CheckBoxProps {
   id: string;
@@ -38,13 +39,7 @@ export const CheckBox = ({ id, name, value, label }: CheckBoxProps) => {
         onChange={handleChange}
         checked={isChecked}
       />
-      <StyledLabel
-        css={{
-          color: isChecked ? 'red' : 'blue',
-        }}
-      >
-        {label}
-      </StyledLabel>
+      <StyledLabel>{label}</StyledLabel>
     </label>
   );
 };
